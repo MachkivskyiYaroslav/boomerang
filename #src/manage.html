@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Manage users</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/dashboard.min.css">
+</head>
+<body>
+<div class="wrapper">
+    <nav id="sidebar">
+        <div class="sidebar-header">
+            <h4>RC</h4>
+        </div>
+        <div class="sidebar-menu">
+
+            <button type="button" id="sidebarCollapse">
+                MENU
+            </button>
+            <ul>
+                <li class="active_li"><a href="#">Dashboard</a></li>
+                <li><a href="#">Users</a></li>
+                <li><a href="#">Workspaces</a></li>
+                <li><a href="#">Groups</a></li>
+                <li><a href="#">Billing</a></li>
+                <li><a href="#">Settings</a></li>
+                <li><a href="#">Download Extension</a></li>
+                <li><a href="#">Log Out</a></li>
+            </ul>
+        </div>
+
+    </nav>
+    <div id="content">
+
+        <div class="container header_container">
+            @@include('_header.html')
+            <div class="container main_container">
+                <div class="top_line">
+                    <div class="row">
+                        <div class="title col-sm-6">
+                            Manage Users
+                        </div>
+                        <div class="plan col-sm-6">
+                            <p>Mark</p>
+                            <a class="free-plan" href="#">Free plan</a>
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="bottom_header_menu">
+                    <div class="row">
+                        <div class="left-side col-sm-12 col-md-10">
+                            <ul>
+                                <li><a href="">Workspace <br> Main</a></li>
+                                <li><a href="">Group <br> My group</a></li>
+                                <li><a href="">Users <br> 1 Selected</a></li>
+                                <li class="data_range">
+                                    <div id="reportrange" style="background: #fff; cursor: pointer;width: 100%">
+                                        <i class="fa fa-calendar"></i>&nbsp;
+                                        <span></span> <i class="fa fa-caret-down"></i>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="manage_menu">
+                    <div class="row">
+                        <div class="col-md-3 col-sm-12 invited">
+                            <ul>
+                                <li><a href="">Invited(1)</a></li>
+                                <li><a href="">Accepted(1)</a></li>
+                            </ul>
+                        </div>
+                        <div class="left-side col-sm-12 col-md-9">
+                            <ul>
+                                <li><a href="">Invite user via email</a></li>
+                                <li><a href="">My Workspace</a></li>
+                                <li><a href="">My Group</a></li>
+                                <li class="add_user btn-success"><a href="">Add user</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="table_users">
+                    <div class="row">
+                        <table class="col-sm-12 table-responsive-lg">
+                            <thead>
+                            <tr>
+                                <td scope="col">Date added</td>
+                                <td scope="col"> Workspace</td>
+                                <td scope="col">Group</td>
+                                <td scope="col">User</td>
+                                <td scope="col">Role</td>
+                                <td scope="col">Sent(0)</td>
+                                <td scope="col">Opened (0)</td>
+                                <td scope="col">Replied</td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>3rd Sep.2020 11h 15pm 2m ago</td>
+                                <td>RS</td>
+                                <td>HR</td>
+                                <td class="email"><p>mark@gmail.com</p>
+                                    <span><strong>(Invited)</strong></span> <br>
+                                    <button class="resend">Resend Invite</button>
+                                </td>
+
+                                <td>Invite</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td class="edit">
+                                    <button>Edit</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>3rd Sep.2020 11h 15pm 2m ago</td>
+                                <td>RS</td>
+                                <td>HR</td>
+                                <td class="email"><p>example@gmail.com</p>
+                                    <span><strong>(Invited)</strong></span> <br>
+                                    <button class="resend">Resend Invite</button>
+                                </td>
+
+                                <td>Invite</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td class="edit">
+                                    <button>Edit</button>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div id="myModal" class="modal fade" tabindex="-1">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title">Send invite to which email</h5>
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            </div>
+                            <div class="modal-body">
+                                <p class="value-email"></p>
+                                <button>Resend</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="editModal" class="modal fade" tabindex="-1">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title">Edit user</h5>
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            </div>
+                            <div class="modal-body">
+                                <form>
+                                    <input type="text" placeholder="Name (optional)">
+                                    <input type="text" placeholder="email" class="value-email">
+                                    <input type="text" placeholder="Workspace">
+                                    <input type="text" placeholder="Group">
+                                    <input type="text" placeholder="Remove">
+                                    <textarea name="notes" placeholder="Notes" id="notes" cols="5" rows="5">
+
+                                </textarea>
+                                    <button type="submit">Save</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            @@include('_footer.html')
+        </div>
+    </div>
+</div>
+
+<script src="/js/Popper.js"></script>
+<script src="js/library.min.js"></script>
+<script src="/js/script.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="js/dashboard.min.js"></script>
+</body>
+</html>

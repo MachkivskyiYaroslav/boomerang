@@ -1,0 +1,161 @@
+@import "_header";
+
+@mixin latoBold($font_size, $color) {
+  font-family: Lato, sans-serif;
+  font-weight: 700;
+  color: $color;
+
+  font-size: $font_size+px;
+}
+
+@mixin latoRegular($font_size, $color ) {
+  font-family: Lato, sans-serif;
+  font-weight: 400;
+  color: $color;
+  font-size: $font_size+px;
+
+}
+
+body {
+  margin: 0 auto;
+  padding: 0;
+}
+
+.pricing {
+  display: none;
+}
+
+#sidebar {
+  margin-top: 35px;
+  max-width: 35%;
+  @media (min-width: 568px) {
+    position: fixed;
+
+  }
+@media (min-width: 768px) {
+
+  .wrapper{
+    padding: 10px 66px;
+  }
+}
+
+  .wrapper {
+    padding: 15px;
+
+    .search-input {
+      input {
+        @include latoRegular(14, #333333);
+      }
+
+      input:focus, input:active {
+        border-color: #e59700;
+
+      }
+    }
+
+    .sidebar-menu {
+      ul {
+        padding-left: 0px;
+        list-style-type: none;
+
+        li {
+          margin-top: 20px;
+          margin-bottom: 10px;
+
+          a {
+            @include latoBold(18, #333333);
+
+          }
+        }
+      }
+    }
+  }
+}
+
+.main-wrapper {
+  padding-bottom: 30px;
+  @media (min-width: 568px){
+    max-width: 90%;
+  }
+
+}
+
+.answers {
+  @media (min-width: 568px){
+    margin-left: 35%;
+  }
+  .container {
+    .row {
+      .content {
+        @media (max-width: 568px) {
+
+          padding: 15px;
+          .video-content{
+            .title{
+              text-align: center;
+            }
+            .text{
+              text-align: center;
+            }
+
+          }
+        }
+        .video-content {
+          .title {
+            @include latoBold(32, #333333);
+            margin-top: 20px;
+            margin-bottom: 10px;
+          }
+
+          .text {
+            @include latoRegular(15, #333333);
+            margin-bottom: 10px;
+          }
+          .video-youtube{
+            iframe{
+              height: 315px;
+              width: 100%;
+              @media (min-width: 992px) {
+                width: 560px;
+              }
+
+            }
+          }
+        }
+        .list-answers{
+          .title{
+            margin-top: 20px;
+            margin-bottom: 10px;
+            @include latoBold(24,#333333)
+          }
+          ul{
+            list-style-type: none;
+            li{
+              margin-bottom: 10px;
+              .link_collapse{
+                padding-left: 18px;
+                font-weight: 700;
+                background: transparent url(../img/arrowexpand.png) left center no-repeat;
+                color: #777;
+              }
+              .active__link__collapse{
+                background: transparent url(../img/arrowcollapse.png) left center no-repeat;
+                color: rgb(51, 51, 51);
+                display: block;
+              }
+              .answer_collapse{
+                margin-left: 1em;
+                padding: 0.4em;
+                p{
+                  @include latoRegular(15,#333333);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@import "_footer";
+@import "node_modules/bootstrap/scss/bootstrap-grid";

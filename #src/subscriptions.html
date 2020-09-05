@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=620, initial-scale=1">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Subscriptions</title>
+
+    <script src="js/library.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/subscriptions.min.css">
+</head>
+<body>
+@@include('_header.html')
+
+<div class="wrapper-main">
+    <div class="intro">
+        <div class="container">
+            <div class="row">
+                <div class="content">
+                    <div class="title">
+                        Boomerang for Gmail Plans and Pricing
+                    </div>
+                    <div class="min-title">
+                        Try now, pay only if you like it!
+                    </div>
+                    <div class="text">
+                        All new Boomerang accounts come with a
+                        <span>Free 30-day Trial</span>
+                        of Boomerang Professional. So go ahead and try it before you decide that you want to subscribe.
+                        Credit card information is
+                       <span> not required </span>to get started.
+                    </div>
+                    <div class="text">
+                        If you don't choose to subscribe to one of the paid subscriptions at the end of the 30 days, you can continue to use the
+                        <span>free Basic plan</span>as long as you'd like!
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <section id="price-table">
+        <div class="container">
+            <div class="row">
+                <table class="compare-plans-table">
+                    <tbody><tr class="compare-plans-title-row">
+                        <td style="background:none;"></td>
+                        <td width="240">Basic</td>
+                        <td width="240">Personal</td>
+                        <td width="240">Pro</td>
+                        <td width="240">Premium</td>
+                    </tr>
+                    <tr class="compare-plans-price-row">
+                        <td width="240"></td>
+                        <td width="240" rowspan="2" style="border-bottom: 1px solid #999;">
+                            <div class="plan-price">FREE</div>
+                        </td>
+                        <td width="240">
+                            <div class="plan-price">$4.99/Month</div>
+                        </td>
+                        <td width="240">
+                            <div class="plan-price">$14.99/Month</div>
+                        </td>
+                        <td width="240">
+                            <div class="plan-price">$49.99/Month</div>
+                        </td>
+                    </tr>
+                    <tr class="compare-plans-upgrade-row">
+                        <td width="240">
+                        </td>
+                        <td width="240">
+                            <div><a href="subscriber_personal.html" class="table button green" id="personal-button" onclick="_gaq.push(['_trackEvent', 'personal_button', 'clicked'])">Sign Up</a></div>
+                        </td>
+                        <td width="240">
+                            <div><a href="subscriber_pro.html" class="table button green" id="pro-button" onclick="_gaq.push(['_trackEvent', 'pro_button', 'clicked'])">Sign Up</a></div>
+                        </td>
+                        <td width="240">
+                            <div><a href="subscriber_premium.html" class="table button green" id="premium-button" onclick="_gaq.push(['_trackEvent', 'premium_button', 'clicked'])">Sign Up</a></div>
+                        </td>
+                    </tr>
+                    <tr class="compare-plans-features-row">
+                        <td width="240">Message Credits</td>
+                        <td width="240">10 per Month</td>
+                        <td width="240">Unlimited</td>
+                        <td width="240">Unlimited</td>
+                        <td width="240">Unlimited</td>
+                    </tr>
+                    <tr class="compare-plans-features-row">
+                        <td width="240">Supported Accounts</td>
+                        <td width="240">Gmail/G Suite (Google Apps)</td>
+                        <td width="240">Gmail</td>
+                        <td width="240">Gmail/G Suite (Google Apps)</td>
+                        <td width="240">Gmail/G Suite (Google Apps)</td>
+                    </tr>
+                    <tr class="compare-plans-features-row">
+                        <td width="240">Send Later</td>
+                        <td width="240"><img src="./img/premiumcheck.png"></td>
+                        <td width="240"><img src="./img/premiumcheck.png"></td>
+                        <td width="240"><img src="./img/premiumcheck.png"></td>
+                        <td width="240"><img src="./img/premiumcheck.png"></td>
+                    </tr>
+                    <tr class="compare-plans-features-row">
+                        <td width="240">Boomerang Reminders</td>
+                        <td width="240"><img src="./img/premiumcheck.png"></td>
+                        <td width="240"><img src="./img/premiumcheck.png"></td>
+                        <td width="240"><img src="./img/premiumcheck.png"></td>
+                        <td width="240"><img src="./img/premiumcheck.png"></td>
+                    </tr>
+                    <tr class="compare-plans-features-row">
+                        <td width="240">Response Tracking <div href="javascript:void(0)" id="response_tracking_expl" class="expl"><img src="img/questionmark.png"></div></td>
+                        <td width="240"><img src="./img/premiumcheck.png"></td>
+                        <td width="240"><img src="./img/premiumcheck.png"></td>
+                        <td width="240"><img src="./img/premiumcheck.png"></td>
+                        <td width="240"><img src="./img/premiumcheck.png"></td>
+                    </tr>
+                    <tr class="compare-plans-features-row">
+                        <td width="240">Read Receipts <div href="javascript:void(0)" id="read_receipt_expl" class="expl"><img src="img/questionmark.png"></div></td>
+                        <td width="240"><img src="./img/premiumcheck.png"></td>
+                        <td width="240"><img src="./img/premiumcheck.png"></td>
+                        <td width="240"><img src="./img/premiumcheck.png"></td>
+                        <td width="240"><img src="./img/premiumcheck.png"></td>
+                    </tr>
+                    <tr class="compare-plans-features-row">
+                        <td width="240">Click Tracking <div href="javascript:void(0)" id="click_tracking_expl" class="expl"><img src="img/questionmark.png"></div></td>
+                        <td width="240"><img src="./img/premiumcheck.png"></td>
+                        <td width="240"><img src="./img/premiumcheck.png"></td>
+                        <td width="240"><img src="./img/premiumcheck.png"></td>
+                        <td width="240"><img src="./img/premiumcheck.png"></td>
+                    </tr>
+                    <tr class="compare-plans-features-row">
+                        <td width="240">Respondable<div href="javascript:void(0)" id="respondable_expl" class="expl"><img src="img/questionmark.png"></div></td>
+                        <td width="240"><img src="./img/premiumcheck.png"></td>
+                        <td width="240"><img src="./img/premiumcheck.png"></td>
+                        <td width="240"><img src="./img/premiumcheck.png"></td>
+                        <td width="240"><img src="./img/premiumcheck.png"></td>
+                    </tr>
+                    <tr class="compare-plans-features-row">
+                        <td width="240">Inbox Pause<div href="javascript:void(0)" id="ip_expl" class="expl"><img src="img/questionmark.png"></div></td>
+                        <td width="240"><img src="./img/premiumcheck.png"></td>
+                        <td width="240"><img src="./img/premiumcheck.png"></td>
+                        <td width="240"><img src="./img/premiumcheck.png"></td>
+                        <td width="240"><img src="./img/premiumcheck.png"></td>
+                    </tr>
+                    <tr class="compare-plans-features-row">
+                        <td width="240">iPhone and Android Apps</td>
+                        <td width="240"><img src="./img/premiumcheck.png"></td>
+                        <td width="240"><img src="./img/premiumcheck.png"></td>
+                        <td width="240"><img src="./img/premiumcheck.png"></td>
+                        <td width="240"><img src="./img/premiumcheck.png"></td>
+                    </tr>
+                    <tr class="compare-plans-features-row">
+                        <td width="240">Notes <div href="javascript:void(0)" id="notes_expl" class="expl"><img src="img/questionmark.png"></div></td>
+                        <td width="240"></td>
+                        <td width="240"><img src="./img/premiumcheck.png"></td>
+                        <td width="240"><img src="./img/premiumcheck.png"></td>
+                        <td width="240"><img src="./img/premiumcheck.png"></td>
+                    </tr>
+                    <tr class="compare-plans-features-row">
+                        <td width="240">Respondable
+                            <br><span style="font-size:.8em;">Advanced Machine Learning</span><div href="javascript:void(0)" id="respondable_ml_expl" class="expl" style="margin-left: -10px; margin-top: -10px; display: table; float: right;"><img src="img/questionmark.png"></div>
+                        </td>
+                        <td width="240"></td>
+                        <td width="240"></td>
+                        <td width="240"><img src="./img/premiumcheck.png"></td>
+                        <td width="240"><img src="./img/premiumcheck.png"></td>
+                    </tr>
+                    <tr class="compare-plans-features-row">
+                        <td width="240">Inbox Pause
+                            <br><span style="font-size:.8em;">Advanced Features</span><div href="javascript:void(0)" id="ip_advanced_expl" class="expl"><img src="img/questionmark.png"></div></td>
+                        <td width="240"></td>
+                        <td width="240"></td>
+                        <td width="240"><img src="./img/premiumcheck.png"></td>
+                        <td width="240"><img src="./img/premiumcheck.png"></td>
+                    </tr>
+                    <tr class="compare-plans-features-row">
+                        <td width="240">Recurring Messages <div href="javascript:void(0)" id="recurring_expl" class="expl"><img src="img/questionmark.png"></div></td>
+                        <td width="240"></td>
+                        <td width="240"></td>
+                        <td width="240"><img src="./img/premiumcheck.png"></td>
+                        <td width="240"><img src="./img/premiumcheck.png"></td>
+                    </tr>
+                    <tr class="compare-plans-features-row">
+                        <td width="240">Track by Default <div href="javascript:void(0)" id="track_by_default_expl" class="expl"><img src="img/questionmark.png"></div></td>
+                        <td width="240"></td>
+                        <td width="240"></td>
+                        <td width="240"></td>
+                        <td width="240"><img src="./img/premiumcheck.png"></td>
+                    </tr>
+                    <tr class="compare-plans-features-row">
+                        <td width="240">Premium Support <div href="javascript:void(0)" id="premium_support_expl" class="expl"><img src="img/questionmark.png"></div></td>
+                        <td width="240"></td>
+                        <td width="240"></td>
+                        <td width="240"></td>
+                        <td width="240"><img src="./img/premiumcheck.png"></td>
+                    </tr>
+                    <tr class="compare-plans-features-row">
+                        <td width="240">Toolbox <div href="javascript:void(0)" id="tool_library_expl" class="expl"><img src="img/questionmark.png"></div></td>
+                        <td width="240"></td>
+                        <td width="240"></td>
+                        <td width="240"></td>
+                        <td width="240"><img src="./img/premiumcheck.png"></td>
+                    </tr>
+                    <tr class="compare-plans-features-row">
+                        <td width="240">Salesforce/CRM Integration <div href="javascript:void(0)" id="salesforce_expl" class="expl"><img src="img/questionmark.png"></div></td>
+                        <td width="240"></td>
+                        <td width="240"></td>
+                        <td width="240"></td>
+                        <td width="240"><img src="./img/premiumcheck.png"></td>
+                    </tr>
+                    <tr class="compare-plans-features-row">
+                        <td width="240">Boomerang Insights <div href="javascript:void(0)" id="analytics_dashboard_expl" class="expl"><img src="img/questionmark.png"></div></td>
+                        <td width="240"></td>
+                        <td width="240"></td>
+                        <td width="240"></td>
+                        <td width="240">Coming Soon!</td>
+                    </tr>
+                    </tbody></table>
+            </div>
+        </div>
+    </section>
+    <section id="subscription">
+        <div class="container">
+            <div class="row">
+                <div class="left col-sm-12 col-md-8">
+                    <p>
+                        Looking to buy a group subscription for your company, team, or group?
+                    </p>
+                    <p>MANAGE TEAM ACCESS · CENTRALIZED BILLING · GROUP DISCOUNT</p>
+                </div>
+                <div class="right col-md-4">
+                    <a class="table button green" href="#">Boomerang for Teams</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="google-cloud">
+        <div class="container">
+            <div class="row">
+                <ul>
+                    <li><img style="width:160px; margin:10px; max-width:100%;" src="img/GoogleCloud_PremierPartner_Badge_150.png" alt=""></li>
+                    <li><a target="_blank" href="privacy.html">Privacy Policy</a></li>
+                    <li><a target="_blank" href="refund.html">Refund Policy</a></li>
+                    <li><a target="_blank" href="faq.html">Billing FAQ</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+</div>
+
+@@include('_footer.html')
+<script src="js/script.min.js"></script>
+</body>
+</html>

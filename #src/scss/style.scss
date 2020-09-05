@@ -1,0 +1,231 @@
+@import "_fonts";
+
+@mixin font($font_name, $file_name, $weight, $style) {
+  @font-face {
+    font-family: $font_name;
+    font-display: swap;
+    src: url("../fonts/#{$file_name}.woff") format("woff"), url("../fonts/#{$file_name}.woff2") format("woff2");
+    font-weight: #{$weight};
+    font-style: #{$style};
+  }
+}
+
+@import "_header";
+.manage{
+  display: none;
+}
+.billing{
+  display: none;
+}
+@mixin latoBold($font_size, $color){
+  font-family: Lato, sans-serif;
+  font-weight: 700;
+  color: $color;
+
+  font-size: $font_size+px;
+}
+@mixin latoRegular($font_size, $color ){
+  font-family: Lato, sans-serif;
+  font-weight: 400;
+  color: $color;
+  font-size: $font_size+px;
+
+}
+
+body {
+  padding: 0;
+  margin: 0 auto;
+}
+
+#first-main{
+  padding-top: 75px;
+  .container{
+    max-width: 830px;
+    .row{
+      justify-content: center;
+      .main-top-block{
+        .content{
+          display: flex;
+          @media (max-width: 768px) {
+            flex-direction: column;
+          }
+        }
+        .title{
+          font-family: Lato, sans-serif;
+          font-size: 32px;
+          font-weight: 700;
+          line-height: 36px;
+          letter-spacing: 0;
+          margin-bottom: 60px;
+          color: #4A4A4A;
+          text-align: center;
+        }
+        .text-block{
+          .text{
+            @media(max-width: 568px){
+             text-align: center;
+            }
+            max-width: 400px;
+            font-weight: 400;
+            font-family: 'Lato', sans-serif;
+            font-size: 19px;
+            line-height: 40px;
+            margin-bottom: 25px;
+            color: #4A4A4A;
+            padding-right: 20px;
+          }
+
+        }
+        .add-this{
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+
+          a{
+            @media(max-width: 568px){
+              font-size: 23px;
+            }
+            width: 100%;
+            background-image: -webkit-linear-gradient(top,#DD2A05,#B71B02);
+            border: 1px solid #CF2307;
+            padding: 16px 1px;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            text-align: center;
+            @media (min-width: 992px) {
+              max-width: 400px;
+            }
+
+            cursor: pointer;
+            @include latoBold(30,#fff);
+          }
+          .browsers{
+            max-width: 400px;
+            @include latoRegular(9, #9B9B9B);
+            font-size: 9px;
+            margin-top: 10px;
+            text-align: center;
+            color: #9B9B9B;
+          }
+        }
+      }
+    }
+  }
+}
+#reviews-slider{
+  .container{
+    max-width: 800px;
+    .row{
+      justify-content: center;
+    }
+  }
+}
+#instructions{
+  padding: 30px 0;
+  .container{
+    max-width: 830px;
+    .row{
+      .instruction-block{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        max-width: 100%;
+
+        .block{
+          @media (min-width: 568px) and (max-width: 768px) {
+            max-width: 50%;
+          }
+          @media (min-width: 768px) {
+            max-width: 40%;
+          }
+
+          .title{
+            margin-top: 20px;
+            margin-bottom: 10px;
+            a{
+              @include latoBold(18,#4a4a4a);
+              text-decoration: none;
+            }
+            a:hover{
+              text-decoration: underline;
+            }
+          }
+          .text{
+            @include latoRegular(13,#262626);
+          }
+        }
+      }
+      .video-block{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        .wrapper10{
+          .social-media{
+            ul{
+              display: flex;
+              justify-content: space-around;
+              padding: 0;
+              margin: 0;
+              list-style: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+hr{
+  height: 1px;
+  background-color: #D4D4D4;
+  width: 100%;
+  border: none;
+}
+#boomerang{
+  padding-bottom: 55px;
+  .container{
+    max-width: 830px;
+    .row{
+      .add-this{
+        .title{
+          @include latoBold(26,#333);
+          text-align: center;
+          margin-bottom: 20px;
+          margin-top: 50px;
+        }
+        a{
+          @media(max-width: 568px){
+            font-size: 23px;
+          }
+          width: 100%;
+          background-image: -webkit-linear-gradient(top,#DD2A05,#B71B02);
+          border: 1px solid #CF2307;
+          padding: 16px 17px;
+          color: #fff;
+          text-decoration: none;
+          border-radius: 5px;
+          text-align: center;
+          @media (min-width: 992px) {
+            max-width: 400px;
+          }
+
+          cursor: pointer;
+          @include latoBold(30,#fff);
+        }
+      }
+      .text-help{
+        @media (min-width: 768px) {
+          padding-left: 50px;
+        }
+      h6{
+        @include latoBold(18,#333);
+        margin: 10px 0;
+        padding-bottom: 10px;
+      }
+      }
+    }
+  }
+}
+@import "_footer";
+@import "node_modules/bootstrap/scss/bootstrap-grid";

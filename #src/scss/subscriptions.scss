@@ -1,0 +1,307 @@
+@import "_header";
+
+.billing {
+  display: none;
+}
+
+@mixin latoBold($font_size, $color) {
+  font-family: Lato, sans-serif;
+  font-weight: 700;
+  color: $color;
+  font-size: $font_size+px;
+}
+
+@mixin latoRegular($font_size, $color ) {
+  font-family: Lato, sans-serif;
+  font-weight: 400;
+  color: $color;
+  font-size: $font_size+px;
+
+}
+
+body {
+  margin: 0 auto;
+  padding: 0;
+}
+
+.wrapper-main {
+  padding-top: 45px;
+
+  .intro {
+    padding-bottom: 50px;
+
+    .container {
+      max-width: 770px;
+
+      .row {
+        .content {
+          .title {
+            @media (max-width: 992px) {
+              text-align: center;
+              padding: 15px;
+            }
+            @include latoBold(32, #333333);
+            line-height: 1.6em;
+            margin-top: 20px;
+            margin-bottom: 10px;
+          }
+
+          .min-title {
+            @media (max-width: 992px) {
+              text-align: center;
+              padding: 15px;
+            }
+            @include latoBold(18, #333333);
+          }
+
+          .text {
+            @media (max-width: 992px) {
+              text-align: center;
+              padding: 15px;
+            }
+            margin-bottom: 10px;
+            @include latoRegular(14, #333333);
+
+            span {
+              font-weight: 700;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .button.green.table {
+    margin: 0;
+    background: #3DB124;
+    background: -webkit-linear-gradient(#3DB124 0%, #148D1C 100%);
+    text-shadow: none;
+    padding: 6px 20px;
+    font-size: 14px;
+    font-family: 'Lato-Regular', 'Arial', sans-serif;
+    color: #fff;
+    font-weight: 700;
+    border-radius: 4px;
+    border: 1px solid #096323;
+  }
+
+  .button.green.table:active {
+    background: #1D750C;
+    background: -moz-linear-gradient(top, #1D750C 0%, #36B317 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #1D750C), color-stop(100%, #36B317));
+    background: -webkit-linear-gradient(top, #1D750C 0%, #36B317 100%);
+    background: -o-linear-gradient(top, #1D750C 0%, #36B317 100%);
+  }
+
+  .button.green.table:hover {
+    text-decoration: none;
+    background: -o-linear-gradient(top, #36B317 0%, #1D750C 100%);
+    background: -moz-linear-gradient(top, #36B317 0%, #1D750C 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #36B317), color-stop(100%, #1D750C));
+    background: -webkit-linear-gradient(top, #36B317 0%, #1D750C 100%);
+
+  }
+
+  .button.green.table:active {
+    background: -o-linear-gradient(top, #1D750C 0%, #36B317 100%);
+    background: -moz-linear-gradient(top, #1D750C 0%, #36B317 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #1D750C), color-stop(100%, #36B317));
+    background: -webkit-linear-gradient(top, #1D750C 0%, #36B317 100%);
+
+  }
+
+  #price-table {
+    .container {
+      max-width: 770px;
+
+      .row {
+
+        .compare-plans-table {
+          border-collapse: collapse;
+          font-size: 12px;
+          width: 100%;
+        }
+
+        .compare-plans-table tr {
+          border-bottom: 1px solid #e2e2e2;
+        }
+
+        .compare-plans-table tr:first-child {
+          border-bottom: none
+        }
+
+        .compare-plans-table tr:nth-child(2) {
+          border-bottom: none
+        }
+
+        .compare-plans-table tr:last-child {
+          border-bottom: 1px solid #999;
+        }
+
+        .compare-plans-table .compare-plans-title-row td {
+          background: #3C4A45;
+          background: -moz-linear-gradient(#3C4A45, #4D5A50);
+          background: -webkit-linear-gradient(#3C4A45 0%, #4D5A50 100%);
+          background: -o-linear-gradient(top, #3C4A45, #4D5A50);
+          color: white;
+          font-size: 16px;
+          text-transform: uppercase;
+          text-align: center;
+          padding: 20px 10px;
+        }
+
+        .compare-plans-features-row td {
+          border-left: 1px solid #999;
+          border-right: 1px solid #999;
+        }
+
+        .compare-plans-upgrade-row td {
+          border-left: 1px solid #999;
+          border-right: 1px solid #999;
+          border-bottom: 1px solid #999;
+          background: rgb(223, 223, 223);
+          text-align: center;
+          padding: 10px;
+        }
+
+        .compare-plans-upgrade-row td:first-child {
+          border-left: none;
+          background: none;
+        }
+
+        .compare-plans-table .compare-plans-price-row td {
+          text-align: center;
+          background: rgb(223, 223, 223);
+          font-weight: bold;
+          border-left: 1px solid #999;
+          border-right: 1px solid #999;
+        }
+
+        .compare-plans-table .compare-plans-price-row td:first-child {
+          background: none;
+          border-left: none;
+          border-top: none;
+          border-bottom: none;
+        }
+
+        .compare-plans-table .compare-plans-price-row .plan-price {
+          padding: 10px 0 0 0;
+        }
+
+        .compare-plans-table .compare-plans-features-row td {
+          background: rgb(246, 246, 246);
+          text-align: center;
+          padding: 12px;
+          width: 18.75%;
+        }
+
+        .compare-plans-table .compare-plans-features-row td:first-child {
+          font-weight: bold;
+          width: 25%;
+        }
+
+        .discount-callout {
+          color: #444;
+        }
+
+        .discounted-price {
+          color: #199F19;
+        }
+
+        .crossed-out-price {
+          text-decoration: line-through;
+        }
+
+
+        .expl {
+          display: inline;
+          cursor: pointer;
+          margin-left: 3px;
+        }
+
+        .expl img {
+          height: 15px;
+        }
+
+        .group-sub-container {
+          margin: 40px 0;
+        }
+
+        .tooltip-img {
+          display: block;
+          margin: 0 auto;
+          padding: 15px 0px;
+        }
+      }
+    }
+  }
+
+  #subscription {
+    margin: 40px 0;
+
+    .container {
+      max-width: 770px;
+
+      .row {
+        .left {
+          p {
+            text-align: center;
+            color: #333333;
+            font-size: 14px;
+            font-family: 'Lato-Regular', 'Arial', sans-serif;
+          }
+        }
+
+        .right {
+          @media (min-width: 768px) {
+            padding: 0;
+            margin-top: 14px;
+
+          }
+          @media (max-width: 768px) {
+            text-align: center;
+
+          }
+          a {
+
+            padding: 8px 45px;
+          }
+        }
+      }
+    }
+  }
+
+  #google-cloud {
+    .container {
+      max-width: 770px;
+
+      .row {
+        justify-content: center;
+
+        ul {
+          display: flex;
+          align-items: center;
+          list-style-type: none;
+
+          li {
+            margin-left: 14px;
+
+            a {
+              @include latoRegular(14, #bdbdbd);
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@import "_footer";
+footer {
+  .container {
+    max-width: 770px;
+  }
+}
+
+@import "node_modules/bootstrap/scss/bootstrap-grid";

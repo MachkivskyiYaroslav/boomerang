@@ -1,0 +1,96 @@
+@import "_header";
+
+.billing {
+  display: none;
+}
+
+@mixin latoBold($font_size, $color) {
+  font-family: Lato, sans-serif;
+  font-weight: 700;
+  color: $color;
+  font-size: $font_size+px;
+}
+
+@mixin latoRegular($font_size, $color ) {
+  font-family: Lato, sans-serif;
+  font-weight: 400;
+  color: $color;
+  font-size: $font_size+px;
+
+}
+
+body {
+  margin: 0 auto;
+  padding: 0;
+}
+.main-wrapper{
+  padding-top: 45px;
+  padding-bottom: 35px;
+  .container{
+    max-width: 770px;
+    @media (max-width: 800px) {
+      padding: 0 30px;
+    }
+    .row{
+      h4{
+        @include latoBold(18,#333333);
+      }
+      .min-title{
+        margin-top: 20px;
+        margin-bottom: 10px;
+        @include latoBold(24,#333333);
+
+      }
+      p{
+        @include latoRegular(14,#333333);
+      }
+      ul{
+        li{
+          line-height: 3em;
+          @include latoRegular(14,#333333);
+        }
+      }
+      .contact{
+        ul{
+          text-align: center;
+          list-style-type: none;
+          li{
+            line-height: initial;
+          }
+        }
+      }
+      .text-border{
+        padding: 10px 20px;
+        margin: 0 0 20px;
+        border-left: 5px solid #eeeeee;
+        @include latoRegular(14,#333333);
+        .text-border-title{
+          @include latoRegular(17.5, #333333);
+          line-height: 1.25;
+        }
+      }
+      .intro{
+        .title{
+          @include latoBold(32,#333333);
+          line-height: 1.6em;
+          margin-top: 20px;
+          margin-bottom: 10px;
+        }
+        .data{
+          margin-bottom: 10px;
+          @include latoRegular(14,#333333);
+        }
+      }
+    }
+  }
+}
+
+
+@import "_footer";
+footer {
+  .container {
+    max-width: 770px;
+  }
+}
+
+@import "node_modules/bootstrap/scss/bootstrap-grid";

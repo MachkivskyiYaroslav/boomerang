@@ -1,0 +1,152 @@
+@import "_header";
+
+header{
+  .header-row{
+    max-width: 1140px
+  }
+}
+
+.billing {
+  display: none;
+}
+
+@mixin latoBold($font_size, $color) {
+  font-family: Lato, sans-serif;
+  font-weight: 700;
+  color: $color;
+  font-size: $font_size+px;
+}
+
+@mixin latoRegular($font_size, $color ) {
+  font-family: Lato, sans-serif;
+  font-weight: 400;
+  color: $color;
+  font-size: $font_size+px;
+
+}
+
+body {
+  margin: 0 auto;
+  padding: 0;
+}
+.main-wrapper{
+  margin-top: 50px;
+  padding-bottom: 50px;
+  .row{
+    .intro{
+      @media (max-width: 768px) {
+
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 35px;
+      }
+      .title{
+        @include latoBold(20,#333);
+        margin-bottom: 20px;
+
+      }
+      p{
+        @include latoBold(18,#333);
+      }
+    }
+
+    .login{
+      @media (max-width: 768px) {
+
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 35px;
+      }
+      .login_title{
+        text-align: center;
+        @include latoBold(16,#333)  ;
+        margin-bottom: 20px;
+      }
+      .already{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 20px;
+        p{
+          @include latoBold(16,#333);
+          margin-bottom: 0;
+        }
+
+        button{
+          background: transparent;
+          border: 1px solid #333;
+          border-radius: 0;
+          @include latoRegular(14,#333);
+          padding: 7px 15px;
+          min-width: 90px;
+          margin-left: 10px;
+        }
+        .create{
+          background: #f8cecc;
+          border: 1px solid  #cb7874;
+        }
+      }
+      .log{
+        @include latoBold(16,#333);
+      }
+      form{
+        max-width: 450px;
+        display: flex;
+        flex-direction: column;
+        #email{
+          border:1px solid #333;
+          padding: 15px 0;
+          text-align: center;
+        }
+        #password{
+          border:1px solid #333;
+          padding: 15px 0;
+          text-align: center;
+          margin: 15px 0;
+        }
+        #forgot{
+          border:none;
+          background: transparent;
+          @include latoBold(16,#333);
+          text-align: left;
+          margin-bottom: 10px;
+        }
+        .block{
+          margin: 20px 0;
+          display: flex;
+          #checkbox{
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+          }
+          label{
+            @include latoBold(16,#333);
+          }
+        }
+        #submit{
+          background: #dae8fc;
+          border: 1px solid #b4c6de;
+          text-align: center;
+          @include latoRegular(14,#333);
+          padding: 15px 0;
+        }
+      }
+    }
+  }
+}
+
+
+@import "_footer";
+footer {
+  .container {
+
+    max-width: 1140px;
+
+  }
+}
+
+@import "node_modules/bootstrap/scss/bootstrap-grid";

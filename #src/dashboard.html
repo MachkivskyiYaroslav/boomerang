@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/dashboard.min.css">
+
+
+</head>
+<body>
+
+
+<div class="wrapper">
+    <nav id="sidebar">
+        <div class="sidebar-header">
+            <h4>RC</h4>
+        </div>
+        <div class="sidebar-menu">
+
+            <button type="button" id="sidebarCollapse">
+                MENU
+            </button>
+            <ul>
+                <li class="active_li"><a href="#">Dashboard</a></li>
+                <li><a href="#">Users</a></li>
+                <li><a href="#">Workspaces</a></li>
+                <li><a href="#">Groups</a></li>
+                <li><a href="#">Billing</a></li>
+                <li><a href="#">Settings</a></li>
+                <li><a href="#">Download Extension</a></li>
+                <li><a href="#">Log Out</a></li>
+            </ul>
+        </div>
+
+    </nav>
+    <div id="content">
+
+        <div class="container header_container">
+            @@include('_header.html')
+            <div class="container main_container">
+                <div class="top_header_menu">
+                    <div class="row">
+                        <div class="left-side col-sm-12 col-md-9">
+                            <ul>
+                                <li><a href="">Invite user via email</a></li>
+                                <li><a href="">My Workspace</a></li>
+                                <li><a href="">My Group</a></li>
+                                <li class="add_user btn-success"><a href="">Add user</a></li>
+                            </ul>
+                        </div>
+                        <div class="right-side col-sm-12 col-md-3">
+                            <p>Mark</p>
+                            <a class="free-plan">Free Plan</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="bottom_header_menu">
+                    <div class="row">
+                        <div class="left-side col-sm-12 col-md-9">
+                            <ul>
+                                <li><a href="">Workspace <br> Main</a></li>
+                                <li><a href="">Group <br> My group</a></li>
+                                <li><a href="">Users <br> 1 Selected</a></li>
+                                <li class="data_range">
+                                    <div id="reportrange" style="background: #fff; cursor: pointer;width: 100%">
+                                        <i class="fa fa-calendar"></i>&nbsp;
+                                        <span></span> <i class="fa fa-caret-down"></i>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="right-side col-sm-12 col-md-3">
+                            <button class="apply">Apply filters</button>
+                            <button class="reset">Reset</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dashboard">
+                    <div class="row">
+                        <canvas id="lineChart" height="350"></canvas>
+                    </div>
+                </div>
+                <div class="table_dashboard">
+                    <div class="row">
+                        <div class="table">
+                            <table class="table-responsive-lg">
+                                <thead class="thead-dark">
+                                <tr>
+                                    <th scope="col">Toogle filters</th>
+                                    <th scope="col">Sent (4332)</th>
+                                    <th scope="col">Opened (23)</th>
+                                    <th scope="col">Replied (4)</th>
+                                    <th scope="col">Done (0)</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td scope="row">Date & Time</td>
+                                    <td scope="row">Workspace</td>
+                                    <td scope="row">Group</td>
+                                    <td scope="row">User</td>
+                                    <td scope="row">Email</td>
+                                    <td scope="row">Title</td>
+                                    <td scope="row">Event</td>
+                                    <td scope="row">Status</td>
+                                </tr>
+                                <tr>
+                                    <td>3rd Sep.2020 11h 15pm 2m ago</td>
+                                    <td>RS</td>
+                                    <td>HR</td>
+                                    <td>mark@gmail.com</td>
+                                    <td>customer@gmail.com</td>
+                                    <td>RE: your team</td>
+                                    <td>Opened</td>
+                                    <td>Mark as Done</td>
+                                </tr>
+                                <tr>
+                                    <td>3rd Sep.2020 11h 15pm 2m ago</td>
+                                    <td>RS</td>
+                                    <td>HR</td>
+                                    <td>mark@gmail.com</td>
+                                    <td>customer@gmail.com</td>
+                                    <td>RE: your team</td>
+                                    <td>Opened</td>
+                                    <td>Mark as Done</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="show_more">
+                    <div class="row">
+                        <button>
+                            Show More
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+
+            @@include('_footer.html')
+        </div>
+    </div>
+</div>
+
+<script src="/js/Popper.js"></script>
+<script src="js/library.min.js"></script>
+<script src="/js/script.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="js/dashboard.min.js"></script>
+
+</body>
+</html>

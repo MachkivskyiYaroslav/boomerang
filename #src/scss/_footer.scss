@@ -1,0 +1,16 @@
+footer{
+ @media (max-width: 800px) {
+   padding: 0 15px;
+ }
+  .container{
+    max-width: 800px;
+    .row{
+      .content{
+        text-align: center;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        @include latoRegular(12,#bdbdbd);
+      }
+    }
+  }
+}
